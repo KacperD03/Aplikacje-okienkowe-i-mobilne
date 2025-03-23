@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.projekt3okienka.HelloController">
+    <children>
+        <!-- Tabela pracowników -->
+        <TableView fx:id="employeeTable" layoutX="200.0" layoutY="50.0" prefHeight="400.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="colImie" text="Imię" />
+                <TableColumn fx:id="colNazwisko" text="Nazwisko" />
+                <TableColumn fx:id="colWynagrodzenie" text="Wynagrodzenie" />
+                <TableColumn fx:id="colStan" text="Stan" />
+                <TableColumn fx:id="colRokUrodzenia" text="Rok Urodzenia" />
+            </columns>
+        </TableView>
+
+        <!-- Lista grup pracowniczych -->
+        <VBox layoutX="20.0" layoutY="50.0" spacing="10">
+            <Label text="Grupy pracownicze" />
+            <ListView fx:id="groupListView" prefHeight="200.0" prefWidth="150.0" />
+            <Button text="Pokaż pracowników" onAction="#showGroupEmployees" />
+            <Button text="Dodaj Grupę" onAction="#addGroup" />
+            <Button text="Usuń Grupę" onAction="#removeGroup" />
+            <TextField fx:id="groupNameField" promptText="Nazwa grupy" />
+            <TextField fx:id="capacityField" promptText="Pojemność" />
+        </VBox>
+
+        <!-- Pole tekstowe do wprowadzenia filtra -->
+        <TextField fx:id="textFilter" layoutX="200.0" layoutY="500.0" prefWidth="200.0" promptText="Filtruj po nazwisku" />
+
+        <!-- Przyciski operacji -->
+        <Button text="Dodaj Pracownika" layoutX="200.0" layoutY="550.0" onAction="#addEmployee" />
+        <Button text="Usuń Pracownika" layoutX="320.0" layoutY="550.0" onAction="#removeEmployee" />
+        <Button text="Sortuj po Imieniu" layoutX="440.0" layoutY="550.0" onAction="#sortEmployeesByName" />
+        <Button text="Sortuj po Wynagrodzeniu" layoutX="560.0" layoutY="550.0" onAction="#sortEmployeesBySalary" />
+        <Button text="Dodaj Pracownika do Grupy" layoutX="200.0" layoutY="580.0" onAction="#addEmployeeToGroup" />
+        <Button text="Powrót do listy pracowników" onAction="#showAllEmployees"/>
+        <Button text="Odśwież listę" layoutX="600.0" layoutY="600.0" onAction="#refreshEmployeeList"/>
+
+
+        <!-- Kontener na pola do wpisania danych pracownika -->
+        <VBox layoutX="200.0" layoutY="600.0" spacing="10">
+            <HBox spacing="10">
+                <TextField fx:id="imieField" promptText="Imię" />
+                <TextField fx:id="nazwiskoField" promptText="Nazwisko" />
+            </HBox>
+            <HBox spacing="10">
+                <TextField fx:id="wynagrodzenieField" promptText="Wynagrodzenie" />
+                <TextField fx:id="rok_urodzeniaField" promptText="Rok Urodzenia" />
+                <ComboBox fx:id="stanComboBox" prefWidth="120.0" promptText="Stan" />
+
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

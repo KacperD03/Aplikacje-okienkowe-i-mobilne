@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:controller="com.test.controllers.MainController" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx/8">
+    <center>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="addEmployeeButton" text="Dodaj pracownika" />
+            <Button fx:id="addGroupButton" text="Dodaj grupę" />
+            <Button fx:id="showGroupsButton" text="Pokaż grupy" />
+<!--            <Button fx:id="addGroupButton" text="Dodaj grupę" />-->
+<!--            <Button fx:id="addEmployeeButton" text="Dodaj pracownika" />-->
+<!--            <Button fx:id="addGroupButton" text="Dodaj grupę" />-->
+        </HBox>
+    </center>
+</BorderPane>
